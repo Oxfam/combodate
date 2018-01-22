@@ -45,7 +45,7 @@
                 ampm:   ['[Aa]', '']
             };
 
-            this.$widget = $('<span class="combodate"></span>').html(this.getTemplate());
+            this.$widget = $('<span class="combodate input-group"></span>').html(this.getTemplate());
 
             this.initCombos();
 
