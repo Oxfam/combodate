@@ -24,6 +24,8 @@ http://jsfiddle.net/5m6gG/62/
 MIT
 
 ## Example
-`<div class="form-inline">
+```
+<div class="form-inline">
     <input type="text" id="dobpicker" data-format="DD-MM-YYYY" data-template="D MMM YYYY" data-minyear="2000" />
-</div>`
+</div>
+```
