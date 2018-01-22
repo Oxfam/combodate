@@ -228,7 +228,7 @@
             var items = [], name, i,
                 longNames = this.options.template.indexOf('YYYY') !== -1;
 
-            for(i=this.options.maxYear; i>=this.options.minYear; i--) {
+            for(i=this.options.maxyear; i>=this.options.minyear; i--) {
                 name = longNames ? i : (i+'').substring(2);
                 items[this.options.yearDescending ? 'push' : 'unshift']([i, name]);
             }
@@ -504,19 +504,19 @@
 
     $.fn.combodate.defaults = {
          //in this format value stored in original input
-        format: 'DD-MM-YYYY HH:mm',
+        format: 'YYYY-MM-DD HH:mm',
         //in this format items in dropdowns are displayed
         template: 'D / MMM / YYYY   H : mm',
         //initial value, can be `new Date()`
         value: null,
-        minYear: 1970,
-        maxYear: 2015,
+        minyear: moment().format('YYYY') - 90,
+        maxyear: moment().format('YYYY'),
         yearDescending: true,
         minuteStep: 5,
         secondStep: 1,
         firstItem: 'empty', //'name', 'empty', 'none'
         errorClass: null,
-        customClass: '',
+        customClass: 'form-control',
         roundTime: true, // whether to round minutes and seconds if step > 1
         smartDays: false // whether days in combo depend on selected month: 31, 30, 28
     };
